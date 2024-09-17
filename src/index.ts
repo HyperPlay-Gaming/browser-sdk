@@ -8,6 +8,7 @@ interface FullscreenStyleProps {
   height: string
   border: string
   overflow: string
+  "z-index": string
 }
 
 // key is elementId
@@ -37,7 +38,8 @@ function cachePrevElementStyles(elementId: string) {
     width: element.style.getPropertyValue('width'),
     height: element.style.getPropertyValue('height'),
     border: element.style.getPropertyValue('border'),
-    overflow: element.style.getPropertyValue('overflow')
+    overflow: element.style.getPropertyValue('overflow'),
+    "z-index": element.style.getPropertyValue('z-index')
   }
 }
 
@@ -53,6 +55,7 @@ function makeElementFullScreenWindow(elementId: string) {
   element.style.setProperty('height', '100%')
   element.style.setProperty('border', 'none')
   element.style.setProperty('overflow', 'hidden')
+  element.style.setProperty('z-index', '2147483647')
 }
 
 function isRenderedInHyperPlayAsIframe() {
