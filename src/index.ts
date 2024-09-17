@@ -8,7 +8,7 @@ interface FullscreenStyleProps {
   height: string
   border: string
   overflow: string
-  "z-index": string
+  'z-index': string
 }
 
 // key is elementId
@@ -39,7 +39,7 @@ function cachePrevElementStyles(elementId: string) {
     height: element.style.getPropertyValue('height'),
     border: element.style.getPropertyValue('border'),
     overflow: element.style.getPropertyValue('overflow'),
-    "z-index": element.style.getPropertyValue('z-index')
+    'z-index': element.style.getPropertyValue('z-index')
   }
 }
 
